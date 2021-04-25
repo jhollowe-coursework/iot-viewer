@@ -3,10 +3,40 @@
 
 <head>
   <title>AWS IoT Viewer</title>
+  <style>
+    table {
+      margin: 20px auto;
+      width: 80%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    th,
+    td {
+      padding: 5px;
+      border: 1px solid black;
+    }
+
+  </style>
 </head>
 
 <body>
   <h2>AWS IoT Viewer</h2>
+  <label for="hosts"> Choose a host to monitor: </label>
+  <select id="hosts">
+    <option value="*">All</option>
+    <option value="">None</option>
+  </select>
+  <br>
+  <table id="event-table">
+    <tr id="event-table-header">
+      <th>Host</th>
+      <th>Event</th>
+      <th>Value</th>
+    </tr>
+  </table>
+
+  <script src="bundle.js"></script>
 </body>
 
 </html>
